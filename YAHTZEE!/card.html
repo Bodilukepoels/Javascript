@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Yahtzee</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='Style.css'>
+  <link rel="icon" href="images/six.png">
+</head>
+
+<body>
+  <div class="Error">
+    <div class="player1">
+      <h1 class="Yahtzee" style="background: cyan">Player 1</h1>
+      <div class="grid-container">
+        <div class="grid-item">aces</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" onclick="checkNumbers(1)" id="score1">0</div>
+        <div class="grid-item">twos</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" onclick="checkNumbers(2)"id="score2">0</div>
+        <div class="grid-item">threes</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" onclick="checkNumbers(3)" id="score3">0</div>
+        <div class="grid-item">fours</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" onclick="checkNumbers(4)" id="score4">0</div>
+        <div class="grid-item">fives</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" onclick="checkNumbers(5)" id="score5">0</div>
+        <div class="grid-item">sixes</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" onclick="checkNumbers(6)" id="score6">0</div>
+        <div class="grid-item">subtotal points</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="seventh">0</div>
+        <div class="grid-item">Bonus</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="eighth">0</div>
+        <div class="grid-item">total points</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="ninth">0</div>
+      </div>
+      <div class="grid-containerb">
+        <div class="grid-item">3 of a kind</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="tenth">0</div>
+        <div class="grid-item">4 of a kind</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="eleventh">0</div>
+        <div class="grid-item">Full house</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="thirteenth">0</div>
+        <div class="grid-item">small straight</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="fourteenth">0</div>
+        <div class="grid-item">large straight</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="fifteenth">0</div>
+        <div class="grid-item">Yahtzee</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="sixteenth">0</div>
+        <div class="grid-item">Chance</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="seventeenth">0</div>
+        <div class="grid-item">Total points</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="eighteenth">0</div>
+      </div>
+      <div class="grid-containerc">
+        <div class="grid-item">top section total</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC2" id="nineteenth">0</div>
+        <div class="grid-item">bottom section total</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC2" id="twentieth">0</div>
+        <div class="grid-item">Grand total</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC2" id="twentieone">0</div>
+      </div>
+    </div>
+    <div class="player2">
+      <h1 class="Yahtzee" style="background: rgb(255, 63, 63)">Player 2</h1>
+      <div class="grid-container">
+        <div class="grid-item" onclick="ones2()">aces</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC " id="first">0</div>
+        <div class="grid-item" onclick="twos2()">twos</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="second">0</div>
+        <div class="grid-item" onclick="threes2()">threes</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="third">0</div>
+        <div class="grid-item" onclick="fours2()">fours</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="fifth">0</div>
+        <div class="grid-item" onclick="fives2()" >fives</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="sixth">0</div>
+        <div class="grid-item" onclick="sixes2()" >sixes</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="seventh">0</div>
+        <div class="grid-item" onclick="" >subtotal points</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="eigtht">0</div>
+        <div class="grid-item">Bonus</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="ninth">0</div>
+        <div class="grid-item">total points</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="tenth">0</div>
+      </div>
+      <div class="grid-containerb">
+        <div class="grid-item">3 of a kind</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="elevent">0</div>
+        <div class="grid-item">4 of a kind</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="twelveth">0</div>
+        <div class="grid-item">Full house</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="thirteenth">0</div>
+        <div class="grid-item">small straight</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="fourteenth">0</div>
+        <div class="grid-item">large straight</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="fifteenth">0</div>
+        <div class="grid-item">Yahtzee</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="sixteenth">0</div>
+        <div class="grid-item">Chance</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="seventeenth">0</div>
+        <div class="grid-item">Total points</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC" id="eighteenth">0</div>
+      </div>
+      <div class="grid-containerc">
+        <div class="grid-item">top section total</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC2" id="nineteenth">0</div>
+        <div class="grid-item">bottom section total</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC2" id="twentieth">0</div>
+        <div class="grid-item">Grand total</div>
+        <div class="grid-itemB"></div>
+        <div class="grid-itemC2" id="twentieOne">0</div>
+      </div>
+    </div>
+
+    <div class="scoreboard">
+      <h2 class="player1score" id="player1score">0</h2>
+      <h2 class="rounds" id="rounds">round 0</h2>
+      <h2 class="player2score" id="player2score">0</h2>
+    </div>
+
+    <div class="playArea">
+      <h2 class="tries" id="display">tries : 3</h2>
+      <h1>Press the dice to keep them</h1>
+      <div class="diceArea">
+        <img class="dice dice1" id="dice1" onclick="holdDice(0)" src="images/blankspace.png">
+        <img class="dice dice2" id="dice2" onclick="holdDice(1)" src="images/blankspace.png">
+        <img class="dice dice3" id="dice3" onclick="holdDice(2)" src="images/blankspace.png">
+        <img class="dice dice4" id="dice4" onclick="holdDice(3)" src="images/blankspace.png">
+        <img class="dice dice5" id="dice5" onclick="holdDice(4)" src="images/blankspace.png">
+      </div>
+      <h1></h1>
+      <button class="try" id="try" onclick="rollDice(), takeOne()">Roll !</button>
+      <button class="reset-btn" onclick="reset()">Reset</button>
+    </div>
+  </div>
+  <h1 class="errorMessage">Please make the webpage bigger</h1>
+
+
+  <script type="text/javascript" src="yahtzee.js"></script>
+</body>
+
+</html>
