@@ -1,0 +1,268 @@
+html {
+    font-family: courier;
+    text-transform: uppercase;
+}
+
+body {
+    background: linear-gradient(#43cea2, #4568dc);
+    background-size: 1920px 1080px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.player1 {
+    position: relative;
+    top: -10px;
+    float: left;
+}
+
+.player2 {
+    position: relative;
+    top: -10px;
+    float: right;
+}
+
+.Yahtzee {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    width: 292px;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: white;
+}
+ 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 312px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.grid-containerb {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 312px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.grid-containerc {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 312px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.grid-item {
+    width: 170px;
+    padding: 8.5px;
+    font-size: 10px;
+    text-align: left;
+    background-color: white;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.grid-itemB {
+    width: 49px;
+    padding: 8.5px;
+    font-size: 10px;
+    text-align: left;
+    background-color: rgb(47, 255, 99);
+    border-bottom: 1px solid black;
+}
+
+.grid-itemC {
+    width: 42px;
+    padding: 8.5px;
+    font-size: 10px;
+    text-align: left;
+    background-color: rgb(252, 240, 218);
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.grid-itemC:hover{
+width: 55px;
+background-color: rgb(219, 204, 176);
+border-right: 2px solid black;
+}
+
+.grid-itemC2 {
+    width: 42px;
+    padding: 8.5px;
+    font-size: 10px;
+    text-align: left;
+    background-color: orangered;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.grid-itemC:nth-child(21) {
+    background-color: orangered
+}
+
+.grid-itemC:nth-child(24) {
+    background-color: orangered
+}
+
+.grid-itemC:nth-child(27) {
+    background-color: orangered
+}
+
+.scoreboard {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    top: 13px;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    height: 35px;
+    background-color: white;
+    line-height: 0px;
+    margin: 10px;
+}
+
+.rounds {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.playArea {
+    font-family: courier;
+    font-size: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 20px;
+    top: 130px;
+    width: 30%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.dice {
+    border: 2.5px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.try {
+    background-color: lime;
+    cursor: pointer;
+    padding: 10px 32px;
+    border-radius: 25px;
+    color: white;
+    margin: 5px;
+}
+
+.try:active {
+    background-color: rgb(0, 241, 61);
+}
+
+.reset-btn {
+    background: red;
+    cursor: pointer;
+    padding: 10px 32px;
+    border-radius: 25px;
+    color: white;
+    margin: 5px;
+}
+
+.reset-btn:active {
+    background-color: rgb(234, 0, 0);
+}
+
+.Error {
+    visibility: visible;
+}
+
+.errorMessage {
+    visibility: hidden;
+    position: relative;
+    top: -400px;
+    text-align: center;
+    color: #ff0000;
+    font-size: 50px;
+    width: 100%;
+}
+.play{
+    text-align: center;
+    opacity: 95%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: white;
+    width: 740.3px;
+    height: 300px;
+    top: -330px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.press2play{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    top: 30px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-family: courier;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#Chance{
+    background-color: rgb(252, 240, 218);
+}
+.press2play:active{
+    background-color: rgb(91, 90, 90)
+}
+
+@media only screen and (max-width: 992px) {
+    .grid-item {
+        width: 50px;
+        height: 12px;
+        line-height: 21px;
+        text-align: center;
+    }
+
+    .grid-container {
+        width: 195px
+    }
+
+    .grid-containerb {
+        width: 195px
+    }
+
+    .grid-containerc {
+        width: 195px
+    }
+
+    .Yahtzee {
+        width: 175px;
+    }
+}
+
+@media only screen and (max-width: 758px) {
+    .Error {
+        width: 580px;
+        visibility: hidden;
+    }
+
+    .errorMessage {
+        visibility: visible;
+    }
+}
